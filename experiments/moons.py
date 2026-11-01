@@ -43,10 +43,10 @@ optimizer = SGD(learning_rate=0.01)
 #training
 for epoch in range(1000):
     #forward
-    pred = network.forward(X)
+    pred = network.forward(X_train)
 
     # compute loss
-    loss = loss_fn.forward(pred, y)
+    loss = loss_fn.forward(pred, y_train)
 
     #backprop
     grad = loss_fn.backward()
